@@ -1,0 +1,117 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta name='viewport' content='width=device-width, initial scale = 1.0'>
+    <link rel="stylesheet" type="text/css" href="~/css/table.css">
+
+    <title>Medicare Hospitals</title>
+</head>
+
+<body>
+    <header>
+
+        <div class='headerdiv'>
+            <h2>
+                <img src="~/images/snake.png" alt="Medical Logo" style="width:75px"> Medicare Hospitals in Pasco County
+            </h2>
+        </div>
+
+    </header>
+
+    <section>
+        <div class="topnav" id="myTopnav">
+            <a href="/Home/Index.html">Home</a>
+            <a href="/Home/Hillsborough.html">Hillsborough County</a>
+            <a class="active" href="/Home/Pasco">Pasco County</a>
+            <a href="/Home/Pinellas">Pinellas County</a>
+            <a href="/Home/About">About</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        <div class='sectionone'>
+            <h3>Pasco County Facilities</h3>
+        </div>
+
+        <div class='sectiontwo'>
+            <p>
+                Included on this page are the hospitals located in Pasco County that offer coverage for Medicare.
+                Important fields were taken from data.gov such as the name of the facility, the city the facility is located,
+                the phone number for the hospital, and the hospital rating given to each facility on a scale of 1 to 5
+                of how well the hospital is run, 1 being poorly and 5 being great. Hospitals are listed in alphabetical
+                order by city.
+            </p>
+            <table class="gridtable" , border="1" , align="center">
+                <tr>
+                    <th>Facility Name</th>
+                    <th>City</th>
+                    <th>Phone Number</th>
+                    <th>Hospital Rating</th>
+                </tr>
+                <tr>
+                    <td>AdventHealth Dade City</td>
+                    <td>Dade City</td>
+                    <td>(352) 568-3174</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Regional Medical Center Bayonet Point</td>
+                    <td>Hudson</td>
+                    <td>(727) 819-2929</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Morton Plant North Bay Hospital</td>
+                    <td>New Port Richey</td>
+                    <td>(727) 842-8468</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>Medical Center of Trinity</td>
+                    <td>Trinity</td>
+                    <td>(727) 834-4900</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>AdventHealth Wesley Chapel</td>
+                    <td>Wesley Chapel</td>
+                    <td>(813) 929-5490</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>North Tampa Behavioral Health</td>
+                    <td>Wesley Chapel</td>
+                    <td>(813) 333-0000</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td>AdventHealth Zephyrhills</td>
+                    <td>Zephyrhills</td>
+                    <td>(813) 788-0411</td>
+                    <td>4</td>
+                </tr>
+            </table>
+        </div>
+
+    </section>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+</body>
+
+</html>
+

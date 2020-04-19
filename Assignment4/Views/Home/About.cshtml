@@ -1,0 +1,108 @@
+﻿@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name='viewport' content='width=device-width, initial scale = 1.0'>
+    <link rel="stylesheet" type="text/css" href="~/css/table.css">
+    <title>About Us.</title>
+</head>
+<body>
+    <header>
+
+        <div class='headerdiv'>
+            <h2>
+                <img src="~/images/snake.png" alt="Medical Logo" style="width:75px">
+                About Us & Data Information
+            </h2>
+        </div>
+
+    </header>
+    <div class="topnav" id="myTopnav">
+        <a href="/Home/Index">Home</a>
+        <a href="/Home/Hillsborough">Hillsborough County</a>
+        <a href="/Home/Pasco">Pasco County</a>
+        <a href="/Home/Pinellas">Pinellas County</a>
+        <a class="active" href="/Home/About">About</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <div id="container">
+        <div id="mainpic">
+
+
+
+            <div id="content">
+                <div class="abtus">
+                    <h1>About us</h1>
+                    <p align="justify">
+                        Welcome to this website, this website provide all the necessary information regarding the hospitals
+                        in South Florida region. If you are searching for or planning on visiting any of the hospitals, this website
+                        can help you compare your closest hospital and types of services offered. HAPPY EXPLORING!
+                    </p>
+                </div>
+
+                <div>
+                    <div class=member>
+                        <link rel="stylesheet" href="CSS.css">
+                        <img src="~/images/Soumitra.jpg" height="160" width="100">
+                        <h2 align="center">Soumitra Korde</h2>
+                        <p align="justify">
+                            Soumitra is a graduate student at University of South Florida and majoring in
+                            Business Analytics and Information Systems. He is an aspiring Data Scientist and his contribution
+                            include building the framework and creation of web pages.
+                        </p>
+                    </div>
+                    <div class=member>
+                        <link rel="stylesheet" href="CSS.css">
+                        <img src="~/images/Ankita.jpeg" height="150" width="120">
+                        <h2 align="center">Ankita Patidar</h2>
+                        <p align="justify">
+                            Ankita is a graduate student at University Of South Florida and majoring in
+                            Business Analytics and Information Systems. She has worked for 4 years as a System Engineer.
+                            Her contribution include designing various pages of the website.
+                        </p>
+                    </div>
+                    <div class=member>
+                        <link rel="stylesheet" href="CSS.css">
+                        <img src="~/images/Sean.jpeg" height="150" width="120">
+                        <h2 align="center">Sean Organ</h2>
+                        <p align="justify">
+                            Sean is in his final semester of Masters degree in Business Analytics and Information System and
+                            looking forward to graduate in May 2020. He helped in creating the html files needed to access the data tables for the cities.
+                        </p>
+                    </div>
+                    <div class=member>
+                        <img src="~/images/Brandon.jpg" height="150" width="120">
+                        <h2 align="center">Brandon Tondreault</h2>
+                        <p align="justify">
+                            Brandon is pursuing a graduate's degree at USF's Business Analytics and Information System.
+                            He currently works as an Industrial Engineer. Brandon helped develop the formatting of this web page.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="footer">
+                <h1>Data Table Information</h1>
+                <img src="~/images/HospitalEntity.JPG">
+                <img src="~/images/Chart.jpg" height="250">
+
+            </div>
+        </div>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta name='viewport' content='width=device-width, initial scale = 1.0'>
+    <link rel="stylesheet" type="text/css" href="~/css/table.css">
+
+    <title>Medicare Hospitals</title>
+</head>
+
+        <body>
+            <header>
+
+                <div class='headerdiv'>
+                    <h2>
+                        <img src="~/images/snake.png" alt="Medical Logo" style="width:75px"> Medicare Hospitals in Hillsborough County
+                    </h2>
+                </div>
+
+
+            </header>
+
+            <section>
+                <div class="topnav" id="myTopnav">
+                    <a href="/Home/Index">Home</a>
+                    <a class="active" href="/Home/Hillsborough">Hillsborough County</a>
+                    <a href="/Home/Pasco">Pasco County</a>
+                    <a href="/Home/Pinellas">Pinellas County</a>
+                    <a href="/Home/Pinellas">About</a>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </div>
+
+                <div class='sectionone'>
+                    <h3>Hillsborough County Facilities</h3>
+                </div>
+
+                <div class='sectiontwo'>
+                    <p>
+                        Included on this page are the hospitals located in Hillsborough County that offer coverage for Medicare.
+                        Important fields were taken from data.gov such as the name of the facility, the city the facility is located,
+                        the phone number for the hospital, and the hospital rating given to each facility on a scale of 1 to 5
+                        of how well the hospital is run, 1 being poorly and 5 being great. Hospitals are listed in alphabetical
+                        order by city.
+                    </p>
+                    <table class="gridtable" , border="1" , align="center">
+                        <tr>
+                            <th>Facility Name</th>
+                            <th>City</th>
+                            <th>Phone Number</th>
+                            <th>Hospital Rating</th>
+                        </tr>
+                        <tr>
+                            <td>Brandon Regional Hospital</td>
+                            <td>Brandon</td>
+                            <td>(813) 681-5551</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>South Florida Baptist Hospital</td>
+                            <td>Plant City</td>
+                            <td>(813) 757-1200</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>South Bay Hospital</td>
+                            <td>Sun City Center</td>
+                            <td>(813) 634-3301</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>AdventHealth Carrollwood</td>
+                            <td>Tampa</td>
+                            <td>(813) 870-4398</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>AdventHealth Tampa</td>
+                            <td>Tampa</td>
+                            <td>(813) 972-2250</td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr>
+                            <td>Memorial Hospital of Tampa</td>
+                            <td>Tampa</td>
+                            <td>(813) 615-7200</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Shriners Hospitals for Children - Tampa</td>
+                            <td>Tampa</td>
+                            <td>(813) 932-2222</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>St. Joseph's Hospital</td>
+                            <td>Tampa</td>
+                            <td>(813) 844-7000</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>Tampa General Hospital</td>
+                            <td>Tampa</td>
+                            <td>(813) 873-6400</td>
+                            <td>3</td>
+                        </tr>
+                    </table>
+                </div>
+
+            </section>
+            <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+            </script>
+        </body>
+</html>
