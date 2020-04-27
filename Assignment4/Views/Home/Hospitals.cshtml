@@ -1,0 +1,102 @@
+﻿@model IEnumerable<Assignment4.Models.Hospital>
+
+@{
+    ViewData["Title"] = "Hospitals";
+}
+
+<head>
+
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - </title>
+    <!---->
+    <link rel="stylesheet" href="~/css/table.css" />
+
+</head>
+
+<body>
+    <header>
+
+        <div class='headerdiv'>
+            <h2>
+                <img src="~/images/snake.png" alt="Medical Logo" style="width:75px"> Medicare Hospitals in Florida
+            </h2>
+        </div>
+
+
+    </header>
+
+    <section>
+        <div>
+            <div class="topnav" id="myTopnav">
+                <a asp-area="" asp-controller="Home" asp-action="Index">HOME</a>
+                <a asp-area="" asp-controller="Home" asp-action="Form">HOSPITAL SEARCH</a>
+                <a class="active" asp-area="" asp-controller="Home" asp-action="Hospitals">HOSPITALS</a>
+                <a asp-area="" asp-controller="Home" asp-action="Chart">CHART</a>
+                <a asp-area="" asp-controller="Home" asp-action="About_us">ABOUT US</a>
+            </div>
+        </div>
+
+        <div class='sectionone'>
+            <h3>Florida State Facilities</h3>
+        </div>
+
+        <div class='sectiontwo'>
+            <p>
+                Included on this page are the hospitals located in Florida State that offer coverage for Medicare.
+                Important fields were taken from data.gov such as the name of the facility, the city the facility is located,
+                the phone number for the hospital, and the hospital rating given to each facility on a scale of 1 to 5
+                of how well the hospital is run, 1 being poorly and 5 being great.
+            </p>
+            <table class="gridtable" , border="1" , align="center">
+                <tr>
+                    <th>Facility Name</th>
+                    <th>Hospital Rating</th>
+                    <th>City</th>
+                    <th>Phone Number</th>
+                </tr>
+                <tbody id="myTable">
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+
+                            <td class="rec">
+                                @Html.DisplayFor(modelItem => item.hospital_name)
+                            </td>
+                            <td class="rec">
+                                @Html.DisplayFor(modelItem => item.hospital_overall_rating)
+                            </td>
+                            <td class="rec">
+                                @Html.DisplayFor(modelItem => item.city)
+                            </td>
+                            <td class="rec">
+                                @Html.DisplayFor(modelItem => item.phone_number)
+                            </td>
+
+
+
+                        </tr>
+                    }
+                    <tr>
+                        <td>
+                            <a id="dbopt" asp-controller="Home" asp-action="savedata">SAVE </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+        </div>
+
+    </section>
+    <script>function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }</script>
+</body>

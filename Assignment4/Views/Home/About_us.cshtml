@@ -1,14 +1,12 @@
 ﻿@{
-    Layout = null;
+    ViewData["Title"] = "Abous Us";
 }
-
-
-<!DOCTYPE html>
-<html>
 <head>
-    <meta name='viewport' content='width=device-width, initial scale = 1.0'>
-    <link rel="stylesheet" type="text/css" href="~/css/table.css">
-    <title>About Us.</title>
+
+
+    <link rel="stylesheet" type="text/css" href="~/css/table.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
 <body>
     <header>
@@ -21,15 +19,14 @@
         </div>
 
     </header>
-    <div class="topnav" id="myTopnav">
-        <a href="/Home/Index">Home</a>
-        <a href="/Home/Hillsborough">Hillsborough County</a>
-        <a href="/Home/Pasco">Pasco County</a>
-        <a href="/Home/Pinellas">Pinellas County</a>
-        <a class="active" href="/Home/About">About</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-        </a>
+    <div>
+        <div class="topnav" id="myTopnav">
+            <a asp-area="" asp-controller="Home" asp-action="Index">HOME</a>
+            <a asp-area="" asp-controller="Home" asp-action="Form">HOSPITAL SEARCH</a>
+            <a asp-area="" asp-controller="Home" asp-action="Hospitals">HOSPITALS</a>
+            <a asp-area="" asp-controller="Home" asp-action="Chart">CHART</a>
+            <a class="active" asp-area="" asp-controller="Home" asp-action="About_us">ABOUT US</a>
+        </div>
     </div>
 
     <div id="container">
@@ -42,7 +39,7 @@
                     <h1>About us</h1>
                     <p align="justify">
                         Welcome to this website, this website provide all the necessary information regarding the hospitals
-                        in South Florida region. If you are searching for or planning on visiting any of the hospitals, this website
+                        in Florida region. If you are searching for or planning on visiting any of the hospitals, this website
                         can help you compare your closest hospital and types of services offered. HAPPY EXPLORING!
                     </p>
                 </div>
@@ -85,24 +82,28 @@
                             He currently works as an Industrial Engineer. Brandon helped develop the formatting of this web page.
                         </p>
                     </div>
+                    <div>
+                        <h1>Data Information</h1>
+                        <p>
+                            <span style="color:black;">
+                                <b>
+                                    This application provides the data of hospitals that have been registered with Medicare via their public <a href="https://data.medicare.gov/Hospital-Compare/Hospital-General-Information/xubh-q36u">API</a>.
+                                    The list includes addresses, phone numbers, hospital type, and overall hospital rating.
+                                </b>
+                            </span>
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div id="footer">
-                <h1>Data Table Information</h1>
-                <img src="~/images/HospitalEntity.JPG">
-                <img src="~/images/Chart.jpg" height="250">
 
             </div>
-        </div>
-        <script>
-            function myFunction() {
-                var x = document.getElementById("myTopnav");
-                if (x.className === "topnav") {
-                    x.className += " responsive";
-                } else {
-                    x.className = "topnav";
+            <script>
+                function myFunction() {
+                    var x = document.getElementById("myTopnav");
+                    if (x.className === "topnav") {
+                        x.className += " responsive";
+                    } else {
+                        x.className = "topnav";
+                    }
                 }
-            }
-        </script>
+            </script>
 </body>
-</html>

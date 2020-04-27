@@ -1,0 +1,64 @@
+﻿@model Assignment4.Models.Hospital
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/table.css" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Search Hospital</title>
+</head>
+<body>
+    <header>
+
+        <div class='headerdiv'>
+            <h2>
+                <img src="~/images/snake.png" alt="Medical Logo" style="width:75px"> Medicare Hospitals in Florida
+            </h2>
+        </div>
+
+
+    </header>
+    <div>
+        <div class="topnav" id="myTopnav">
+            <a asp-area="" asp-controller="Home" asp-action="Index">HOME</a>
+            <a class="active" asp-area="" asp-controller="Home" asp-action="Form">HOSPITAL SEARCH</a>
+            <a asp-area="" asp-controller="Home" asp-action="Hospitals">HOSPITALS</a>
+            <a asp-area="" asp-controller="Home" asp-action="Chart">CHART</a>
+            <a asp-area="" asp-controller="Home" asp-action="About_us">ABOUT US</a>
+        </div>
+    </div>
+    <div>
+        <p>
+            Please enter a florida city below in which you would like hospital information on.
+            Examples include "ORLANDO", "LEESBURG", "MIAMI"
+        </p>
+    </div>
+    <form asp-action="Form" method="post">
+        <p>
+            <label asp-for="city">City (ALL CAPS): </label>
+            <input asp-for="city" />
+        </p>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Form</title>
+</head>
+<body>
+</body>
+</html>
